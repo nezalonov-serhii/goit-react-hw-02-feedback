@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import {
   Title,
   WrapFeedback,
@@ -9,7 +11,7 @@ export const Stattistics = ({
   neutral,
   bad,
   total,
-  countPositiveFeedbackPercentage,
+  PositivePercentage,
 }) => {
   return (
     <div>
@@ -20,9 +22,17 @@ export const Stattistics = ({
         <p>Bad: {bad}</p>
       </WrapFeedback>
       <WrapTotal>
-        <p>Total: {total()}</p>
-        <p>Positive feedback: {countPositiveFeedbackPercentage(total)}%</p>
+        <p>Total: {total}</p>
+        <p>Positive feedback: {PositivePercentage}%</p>
       </WrapTotal>
     </div>
   );
+};
+
+Stattistics.propTypes = {
+  good: PropTypes.number,
+  neutral: PropTypes.number,
+  bad: PropTypes.number,
+  total: PropTypes.number,
+  PositivePercentage: PropTypes.number,
 };

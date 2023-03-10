@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { FeedbackListButtons } from 'components/Feedback/Feedback.styled';
 
 export const FeedbackOptions = ({ onLeaveFeedback, options }) => {
@@ -36,4 +38,14 @@ export const FeedbackOptions = ({ onLeaveFeedback, options }) => {
       </li>
     </FeedbackListButtons>
   );
+};
+
+FeedbackOptions.propTypes = {
+  onLeaveFeedback: PropTypes.func.isRequired,
+
+  options: PropTypes.exact({
+    good: PropTypes.string.isRequired,
+    neutral: PropTypes.string.isRequired,
+    bad: PropTypes.string.isRequired,
+  }),
 };
