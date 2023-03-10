@@ -34,7 +34,7 @@ export class App extends Component {
       <Section title="Please leave feedback">
         <FeedbackOptions
           onLeaveFeedback={this.onLeaveFeedback}
-          options={{ good: 'good', neutral: 'neutral', bad: 'bad' }}
+          options={['good', 'neutral', 'bad']}
         />
 
         {this.countTotalFeedback() === 0 ? (

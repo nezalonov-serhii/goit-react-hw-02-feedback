@@ -7,7 +7,7 @@ export const FeedbackListButtons = styled.ul`
   margin-bottom: 30px;
 
   & button {
-    padding: 5px 10px;
+    padding: 7px 13px;
 
     border-radius: 7px;
     border: none;
