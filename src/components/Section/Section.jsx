@@ -1,8 +1,16 @@
+import PropTypes from 'prop-types';
+import { FeedbackListButtons } from 'components/Section/Section.styled';
+
 export const Section = ({ title, children }) => {
   return (
-    <section>
+    <FeedbackListButtons>
       <h1>{title}</h1>
       {children}
-    </section>
+    </FeedbackListButtons>
   );
+};
+
+Section.propTypes = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.array.isRequired,
 };

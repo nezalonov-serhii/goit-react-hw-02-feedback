@@ -1,3 +1,5 @@
+import { Title } from 'components/Notification/Notification.styled';
+
 export const Notification = () => {
-  return <h2>No feedback given</h2>;
+  return <Title>No feedback given</Title>;
 };

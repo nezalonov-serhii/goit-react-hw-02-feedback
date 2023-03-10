@@ -1,10 +1,14 @@
+import { FeedbackListButtons } from 'components/Feedback/Feedback.styled';
+
 export const FeedbackOptions = ({ onLeaveFeedback, options }) => {
+  const { good, neutral, bad } = options;
   return (
-    <ul>
+    <FeedbackListButtons>
       <li>
         <button
+          name="good"
           onClick={() => {
-            onLeaveFeedback(options.good);
+            onLeaveFeedback(good);
           }}
         >
           Good
@@ -12,8 +16,9 @@ export const FeedbackOptions = ({ onLeaveFeedback, options }) => {
       </li>
       <li>
         <button
+          name="neutral"
           onClick={() => {
-            onLeaveFeedback(options.neutral);
+            onLeaveFeedback(neutral);
           }}
         >
           Neutral
@@ -21,13 +26,14 @@ export const FeedbackOptions = ({ onLeaveFeedback, options }) => {
       </li>
       <li>
         <button
+          name="bad"
           onClick={() => {
-            onLeaveFeedback(options.bad);
+            onLeaveFeedback(bad);
           }}
         >
           Bad
         </button>
       </li>
-    </ul>
+    </FeedbackListButtons>
   );
 };
